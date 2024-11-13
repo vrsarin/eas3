@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:80"
+    depends_on:
+      - memcached
+    environment:
+      MEMCACHED_HOST: memcached
+      MEMCACHED_PORT: 11211
+      BASE_UPLOAD_FOLDER: "/data"
+    volumes:
+      - ./data:/data
+  memcached:
+    image: memcached:latest
+    ports:
+      - "11211:11211"

@@ -1,0 +1,6 @@
+fastapi~=0.115.5
+pydantic~=2.9.2
+python-multipart~=0.0.17
+uvicorn~=0.32.0
+pymemcache~=4.0.0
+starlette~=0.41.2
